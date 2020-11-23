@@ -304,7 +304,7 @@ public class Utils {
                 CheckField cf = field.getAnnotation(chkField);
                 if (field.isAnnotationPresent(chkField)) {
                     //返回被标注的对象
-
+                    //
                     //获取字段是否填写（不校验，空，非空）
                     if (cf.check().equals(Check.unchecks)&&cf.type().equals(Check.basics)) {
                         continue;
@@ -316,6 +316,26 @@ public class Utils {
                         fValue = field.get(pojo1);
                     } catch (Exception e) {
                         return "获取字段值异常！";
+                    }
+                    //获取最大值
+                    int max = cf.maxlen();
+                    //获取配置最小值
+                    int min = cf.minlen();
+                    int flength = 0;
+                    //为空时判断
+                    if (fValue != null) {
+                        try {
+                            String strVal = fValue.toString();
+                            flength = strVal.length();
+                        } catch (Exception e) {
+
+                        }
+                    }
+                    if (max < flength) {
+                        return  cf.name() + "长度不能大于" + max + "！";
+                    }
+                    if (min > flength) {
+                        return  cf.name() + "长度不能小于" + min + "！";
                     }
                 }
                 //获取对象具体信息
@@ -360,6 +380,7 @@ public class Utils {
                                 i++;
                             }
                         }
+
 
                     }
             }
