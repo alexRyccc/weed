@@ -1,11 +1,7 @@
-package com.weed.loginfo.test;
-
 import com.weed.loginfo.annotion.Check;
 import com.weed.loginfo.annotion.CheckField;
 
 import java.util.List;
-
-import static com.weed.loginfo.annotion.Check.beans;
 
 /**
  * @Author Alexryc
@@ -15,22 +11,22 @@ import static com.weed.loginfo.annotion.Check.beans;
 
 public class testBean {
 
-    @CheckField(name = "总可用余额",check = Check.checks)
+    @CheckField(name = "总可用余额", check = Check.checks)
     private String aviAmt;
     /**
      *
      */
-    @CheckField(name = "待结算余额",check = Check.checks)
+    @CheckField(name = "待结算余额", check = Check.checks)
     private String settAmt;
     /**
      *
      */
-    @CheckField(name = "冻结金额",check = Check.checks)
+    @CheckField(name = "冻结金额", check = Check.checks)
     private String freezeAmt;
     /**
      *
      */
-    @CheckField(name = "可提现余额",check = Check.checks)
+    @CheckField(name = "可提现余额", check = Check.checks)
     private String txAviAmt;
     /**
      *
@@ -43,13 +39,13 @@ public class testBean {
     @CheckField(name = "二类户总余额")
     private String eacTotalAmt;
 
-    @CheckField(name = "屁屁超人",type = Check.arrays)
+    @CheckField(name = "屁屁超人", type = Check.arrays)
     private String[] TotalAmt;
 
-    @CheckField(name = "派大星",type = Check.sets)
+    @CheckField(name = "派大星", type = Check.sets)
     private List<String> tutu;
 
-    @CheckField(name = "用户信息" ,type = Check.beans)
+    @CheckField(name = "用户信息", type = Check.beans)
     private User testBean;
 
     public String getAviAmt() {

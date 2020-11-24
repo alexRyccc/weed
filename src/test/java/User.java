@@ -1,5 +1,3 @@
-package com.weed.loginfo.test;
-
 import com.weed.loginfo.annotion.Check;
 import com.weed.loginfo.annotion.CheckField;
 
@@ -9,9 +7,9 @@ import com.weed.loginfo.annotion.CheckField;
  * @Version 1.0
  */
 public class User {
-    @CheckField(name = "用户名",check = Check.checks)
+    @CheckField(name = "用户名", check = Check.checks)
     private String name;
-    @CheckField(name = "用户年龄",check = Check.checks)
+    @CheckField(name = "用户年龄", check = Check.checks)
     private Integer age;
 
     public String getName() {
