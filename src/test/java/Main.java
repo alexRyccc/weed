@@ -1,3 +1,4 @@
+import com.weed.loginfo.util.JsonUtil;
 import com.weed.loginfo.util.Utils;
 import org.junit.Test;
 
@@ -52,7 +53,7 @@ public class Main {
 
         testBean t2 = new testBean("40000", "15000", "15000", "10000", "5000", "40000", st2, bh, u2);
 
-        String s = Utils.contrastSourceFundByBean(t1, t2);
+        String s = JsonUtil.contrastSourceFundByBean(t1, t2,0);
         System.out.println(s);
     }
 
