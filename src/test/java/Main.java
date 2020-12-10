@@ -1,3 +1,4 @@
+import com.weed.loginfo.util.ExcelReadUtil;
 import com.weed.loginfo.util.JsonUtil;
 import com.weed.loginfo.util.Utils;
 import org.junit.Test;
@@ -30,6 +31,10 @@ public class Main {
 //        paths.add(l3);
 //        destCity(paths);
 
+    }
+
+    public void excelRead(){
+        List<ExcelReq> list = ExcelReadUtil.readExcelFile("File地址", ExcelReq.class);
     }
 
     @Test
